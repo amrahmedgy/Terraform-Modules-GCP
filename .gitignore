@@ -1,0 +1,8 @@
+# Terraform files
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tfvars
+
+# Local files
+*.html
