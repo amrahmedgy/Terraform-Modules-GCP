@@ -50,7 +50,7 @@ Terraform-Modules-GCP/
 Before you embark on this Terraform journey, ensure you have:
 - **Google Cloud SDK (`gcloud`)**: Installed and authenticated ([Install Guide](https://cloud.google.com/sdk/docs/install)).
 - **Terraform**: Version 1.0 or later ([Install Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)).
-- **GCP Project**: A project with billing enabled (e.g., `terraform-gcp-455215`).
+- **GCP Project**: A project with billing enabled (e.g., `YOUR-GCP-PROJECT-ID`).
 - **Git**: To clone this repo (`sudo apt install git` on Ubuntu).
 
 ---
