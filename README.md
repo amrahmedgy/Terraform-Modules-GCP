@@ -6,7 +6,7 @@ Welcome to the **Terraform GCP Modules Lab**—a hands-on adventure into the wor
 - **VPC Magic**: Spin up a custom Virtual Private Cloud (VPC) with subnets using a pre-built module from the Terraform Registry.
 - **Static Website Wizardry**: Deploy a Google Cloud Storage (GCS) bucket for hosting static websites, complete with lifecycle rules and versioning.
 
-🌍 **Repository**: [github.com/amrahmedgy/terraform-gcp-modules-lab](https://github.com/amrahmedgy/terraform-gcp-modules-lab)
+🌍 **Repository**: [[github.com/amrahmedgy/terraform-gcp-modules-lab](https://github.com/amrahmedgy/terraform-gcp-modules-lab)](https://github.com/amrahmedgy/Terraform-Modules-GCP)
 
 ---
 
@@ -184,6 +184,6 @@ This project is licensed under the Apache 2.0 License. See [LICENSE](LICENSE) fo
 ---
 
 ## Contribute or Say Hi! 👋
-Found a bug? Want to add flair? Open an issue or PR at [github.com/amrahmedgy/terraform-gcp-modules-lab](https://github.com/amrahmedgy/terraform-gcp-modules-lab). Questions? Ping me on GitHub!
+Found a bug? Want to add flair? Open an issue or PR at [[github.com/amrahmedgy/terraform-gcp-modules-lab](https://github.com/amrahmedgy/terraform-gcp-modules-lab)](https://github.com/amrahmedgy/Terraform-Modules-GCP). Questions? Ping me on GitHub!
 
 Happy Terraforming! 🎉
