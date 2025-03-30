@@ -76,16 +76,16 @@ Update `variables.tf` files with your GCP project ID and a unique bucket name:
 - **Root `variables.tf`** (for GCS bucket):
   ```hcl
   variable "project_id" {
-    default = "terraform-gcp-455215" # Your project ID
+    default = "YOUR-PROJECT-ID" # Your project ID
   }
   variable "name" {
-    default = "terraform-gcp-455215-bucket-test1" # Unique bucket name
+    default = "YOUR-BUCKET-NAME" # Unique bucket name
   }
   ```
 - **`examples/simple-vpc/variables.tf`** (for VPC):
   ```hcl
   variable "project_id" {
-    default = "terraform-gcp-455215" # Your project ID
+    default = "YOUR-PROJECT-ID" # Your project ID
   }
   ```
 
