@@ -23,7 +23,7 @@ Perfect for beginners and seasoned IaC enthusiasts alike!
 ## Project Structure 🗂️
 Here’s the lay of the land:
 ```
-terraform-gcp-modules-lab/
+Terraform-Modules-GCP/
 ├── examples/               # Ready-to-run examples
 │   └── simple-vpc/         # VPC network with subnets
 │       ├── main.tf
@@ -60,8 +60,8 @@ Before you embark on this Terraform journey, ensure you have:
 ### Step 1: Clone the Repository
 Grab the code from GitHub:
 ```bash
-git clone https://github.com/amrahmedgy/terraform-gcp-modules-lab.git
-cd terraform-gcp-modules-lab
+git clone https://github.com/amrahmedgy/Terraform-Modules-GCP.git
+cd Terraform-Modules-GCP
 ```
 
 ### Step 2: Authenticate with GCP
@@ -76,7 +76,7 @@ Update `variables.tf` files with your GCP project ID and a unique bucket name:
 - **Root `variables.tf`** (for GCS bucket):
   ```hcl
   variable "project_id" {
-    default = "YOUR-PROJECT-ID" # Your project ID
+    default = "YOUR-GCP-PROJECT-ID" # Your project ID
   }
   variable "name" {
     default = "YOUR-BUCKET-NAME" # Unique bucket name
@@ -85,7 +85,7 @@ Update `variables.tf` files with your GCP project ID and a unique bucket name:
 - **`examples/simple-vpc/variables.tf`** (for VPC):
   ```hcl
   variable "project_id" {
-    default = "YOUR-PROJECT-ID" # Your project ID
+    default = "YOUR-GCP-PROJECT-ID" # Your project ID
   }
   ```
 
@@ -103,7 +103,7 @@ Let’s create a VPC with three subnets using the `terraform-google-network` mod
    ```
 2. **Enable the Compute Engine API**:
    ```bash
-   gcloud services enable compute.googleapis.com --project=terraform-gcp-455215
+   gcloud services enable compute.googleapis.com --YOUR-GCP-PROJECT-ID
    ```
 3. **Initialize Terraform**:
    ```bash
@@ -133,11 +133,11 @@ Deploy a GCS bucket with versioning and lifecycle rules, then upload a sample si
 #### Steps:
 1. **Return to Root**:
    ```bash
-   cd ~/terraform-gcp-modules-lab
+   cd ~/Terraform-Modules-GCP
    ```
 2. **Enable the Cloud Storage API**:
    ```bash
-   gcloud services enable storage.googleapis.com --project=terraform-gcp-455215
+   gcloud services enable storage.googleapis.com --YOUR-GCP-PROJECT-ID
    ```
 3. **Initialize Terraform**:
    ```bash
@@ -148,16 +148,16 @@ Deploy a GCS bucket with versioning and lifecycle rules, then upload a sample si
    ```bash
    terraform apply
    ```
-   - Review the plan (1 bucket: `terraform-gcp-455215-bucket-test1`).
+   - Review the plan (1 bucket: `YOUR-BUCKET-NAME`).
    - Type `yes` to approve.
    - Output: `bucket-name` with bucket details.
 5. **Upload a Sample Site** (Optional):
    ```bash
    curl https://raw.githubusercontent.com/hashicorp/learn-terraform-modules/master/modules/aws-s3-static-website-bucket/www/index.html > index.html
    curl https://raw.githubusercontent.com/hashicorp/learn-terraform-modules/master/modules/aws-s3-static-website-bucket/www/error.html > error.html
-   gsutil cp *.html gs://terraform-gcp-455215-bucket-test1
+   gsutil cp *.html gs://YOUR-BUCKET-NAME
    ```
-   - Visit: `https://storage.cloud.google.com/terraform-gcp-455215-bucket-test1/index.html`.
+   - Visit: `https://storage.cloud.google.com/YOUR-BUCKET-NAME/index.html`.
 6. **Clean Up**:
    ```bash
    terraform destroy
@@ -167,7 +167,7 @@ Deploy a GCS bucket with versioning and lifecycle rules, then upload a sample si
 ---
 
 ## Tips & Tricks 🌟
-- **Unique Bucket Names**: GCS names are global. If `terraform-gcp-455215-bucket-test1` fails, append a timestamp (e.g., `-20250330`).
+- **Unique Bucket Names**: GCS names are global. If `YOUR-BUCKET-NAME` fails, append a timestamp (e.g., `-20250330`).
 - **API Delays**: Wait 2-5 minutes after enabling APIs if errors persist.
 - **GitHub Updates**: Made a tweak? Push it:
   ```bash
